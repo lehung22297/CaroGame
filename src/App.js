@@ -5,13 +5,10 @@ class App extends React.Component {
   render() {
     return (
       <div >
-        <div>
+        <div className="black">
           <Board />
         </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
+        
       </div>
     );
   }

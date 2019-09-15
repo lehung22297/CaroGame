@@ -812,22 +812,18 @@ export default class Board extends React.Component {
             items = []
         }
         return (
-            <div className="shadow-lg p-3 mb-5 bg-white rounded status2">
+            <div class="shadow pl-3 pr-3 pb-3 mt-3 bg-white rounded status2">
                 <div className="status1">
                     <h3>GAME CARRO</h3>
                     {itemss}
                 </div>
                 <div className="status3">
-                    {status}
+                    <h5><u>{status}</u></h5>
                     <br></br> 
-                    <br></br> 
-                    <br></br> 
-                    <br></br> 
-                    {sum}
-                    <br></br> 
+                    <br></br>  
+                    <h5><u>{sum}</u></h5>                     
                     <br></br>
-                    <br></br> 
-                    <br></br>                    
+                    <br></br>                     
                 <button onClick={() => this.handleClickReset()} type="button" class="btn btn-success" >Restart game</button>
                 </div>
             </div>
