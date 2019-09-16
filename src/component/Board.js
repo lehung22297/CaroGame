@@ -410,6 +410,7 @@ export default class Board extends React.Component {
                             text: '0 is winner :)',
                         })
                     }
+                    break;
 
 
                 }
@@ -772,6 +773,7 @@ export default class Board extends React.Component {
                             text: 'X is winner :)',
                         })
                     }
+                    break;
 
 
                 }
