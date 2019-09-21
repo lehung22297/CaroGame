@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+.slect{
+  height: 65%;
+  width: 100%;
+  
+}
 
 .black{
   align-items: center;
@@ -68,7 +73,7 @@ ol, ul {
 
 .status3 {
   text-align: left;
-  margin-left: 20px;
+  margin-right: 40px;
   margin-top: 34px;
   
 }
