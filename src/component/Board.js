@@ -1,37 +1,15 @@
 import Square from './Square'
 import React from "react"
 
-
-
-
 export default class Board extends React.Component {
     renderSquare(i) {
         var arrWin = this.props.arrWins;
         if (arrWin.length === 0) {
-            return (
-                <Square
-                    //style={this.props.arrWin}  
-                    style="white"
-                    background={this.props.background}
-                    value={this.props.squares[i]}
-                    onClick={() => this.props.onClick(i)}
-                />
-            );
-        }
-        else {
-            var check = false;
-            arrWin.forEach(element => {
-                console.log(element)
-                if (element === i) {
-                    check = true;
-                }
-
-            })
-            if (check) {
+            if (this.props.squares[i]=== 'O') {
                 return (
                     <Square
-                        style="#28A745"
-                        background={this.props.background}
+                        color="red"
+                        style="white"
                         value={this.props.squares[i]}
                         onClick={() => this.props.onClick(i)}
                     />
@@ -40,12 +18,65 @@ export default class Board extends React.Component {
             else {
                 return (
                     <Square
+                        color="black"
                         style="white"
-                        background={this.props.background}
                         value={this.props.squares[i]}
                         onClick={() => this.props.onClick(i)}
                     />
                 );
+            }
+
+        }
+        else {
+            var check = false;
+            arrWin.forEach(element => {
+                if (element === i) {
+                    check = true;
+                }
+            })
+            if (check) {
+                if (this.props.squares[i]=== 'O') {
+                    return (
+                        <Square
+                            color="red"
+                            style="#28A745"
+                            value={this.props.squares[i]}
+                            onClick={() => this.props.onClick(i)}
+                        />
+                    );
+                }
+                else {
+                    return (
+                        <Square
+                            color="black"
+                            style="#28A745"
+                            value={this.props.squares[i]}
+                            onClick={() => this.props.onClick(i)}
+                        />
+                    );
+                } 
+            }
+            else {
+                if (this.props.squares[i]=== 'O') {
+                    return (
+                        <Square
+                            color="red"
+                            style="white"
+                            value={this.props.squares[i]}
+                            onClick={() => this.props.onClick(i)}
+                        />
+                    );
+                }
+                else {
+                    return (
+                        <Square
+                            color="black"
+                            style="white"
+                            value={this.props.squares[i]}
+                            onClick={() => this.props.onClick(i)}
+                        />
+                    );
+                }
             }
 
         }
@@ -84,7 +115,7 @@ export default class Board extends React.Component {
 
 
         return (
-            <div class="shadow pl-3 pr-3 pb-3 mt-3 bg-white rounded " >
+            <div className="shadow pl-3 pr-3 pb-3 mt-3 bg-white rounded " >
                 <div className="status1">
                     <h3>GAME CARRO</h3>
                     {itemss}

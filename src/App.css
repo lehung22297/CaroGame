@@ -1,11 +1,15 @@
 .App {
   text-align: center;
 }
-.slect{
-  height: 65%;
-  width: 100%;
-  
-}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 250px;
+  overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  }
 
 .black{
   align-items: center;
@@ -85,13 +89,13 @@ ol, ul {
   font-size: 20px;
   font-weight: bold;
   line-height: 34px;
-  height: 30px;
+  height: 28px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 30px;
-  color: red;
+  width: 28px;
+  
 }
 
 .square:focus {
